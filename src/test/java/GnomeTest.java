@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 import static java.lang.System.out;
 class GnomeTest{
 
@@ -51,60 +52,5 @@ class GnomeTest{
         out.println("Gnome "+ Handicaped1.Name + " " + Handicaped1.Id +  ":" + Handicaped1.SkinColour +' ' + Handicaped1.Sex +' ' + Handicaped1.Build +' ' + Handicaped1.Size+' '+Handicaped1.Price  );
     }
 
-    @org.junit.jupiter.api.Test
-    void testSetName() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testSetSkinColour() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testSetSize() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testSetBuild() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testSetSex() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetName() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetAge() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetSkinColour() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetSize() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetBuild() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void testGetSex() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void work() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void idle() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void handCrafting() {
-    }
 
 }
