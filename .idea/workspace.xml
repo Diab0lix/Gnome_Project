@@ -17,6 +17,24 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GnomeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-GnomeTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-HunterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-HunterTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-StockTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-StockTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HunterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HunterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DelicateHands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DelicateHands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Gnome.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Gnome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handicaped.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handicaped.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Hunter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Normal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Normal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Shiny.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Shiny.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Special.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Special.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GnomeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GnomeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HunterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HunterTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StockTest.class" afterDir="false" />
     </list>
@@ -90,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HunterTest.hunt">
+  <component name="RunManager" selected="JUnit.HunterTest.HuntToStockTest">
     <configuration name="GnomeTest.getPrice (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GnomeTest" />
@@ -120,11 +138,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HunterTest.hunt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HunterTest.HuntToStockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Gnome_Project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HunterTest" />
-      <option name="METHOD_NAME" value="hunt" />
+      <option name="METHOD_NAME" value="HuntToStockTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,6 +153,11 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StockTest" />
       <option name="METHOD_NAME" value="addGnome" />
+    <configuration name="HunterTest.hunt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Gnome_Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HunterTest" />
+      <option name="METHOD_NAME" value="hunt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HunterTest.HuntToStockTest" />
         <item itemvalue="JUnit.HunterTest.hunt" />
-        <item itemvalue="JUnit.StockTest.addGnome" />
         <item itemvalue="JUnit.GnomeTest.getPrice" />
         <item itemvalue="JUnit.GnomeTest.testCreationOfGnomes" />
         <item itemvalue="JUnit.GnomeTest.getPrice (1)" />
@@ -167,9 +190,6 @@
       <workItem from="1573120676724" duration="974000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24080000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
