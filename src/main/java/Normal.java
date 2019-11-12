@@ -1,56 +1,59 @@
 import java.util.*;
 
+import static java.lang.System.out;
+
 /**
  *
  */
 public class Normal extends Gnome {
 
     public float PriceMultiplier = 1;
+    private List<String> ColourList = Arrays.asList("red", "blue", "white","black","yellow","metis");
+    private List<Integer> AgeList = Arrays.asList(5,6,7,8,9,10,11,12,13,14,15);
+    private List<String> SizeList = Arrays.asList("extra_small","extra_large","small", "medium", "large");
+    private List<String> BuildList = Arrays.asList("thin","obese","normal", "thick");
+    private List<String> SexList = Arrays.asList("female", "male","other");
+    private List<String> TalkList = Arrays.asList("J'ai fait un collier de nouille", "J'ai fait cadre en pate","J'ai fait un porte clef en perle");
 
     /**
      * Default constructor
      */
-    public Normal(int id, String name, int age, String skincolour,String size,String build,String sex) {
-        super(id, name, age, skincolour, size, build, sex);
+    public Normal(int id, String name, int age, String skincolour,String size,String build,String sex,double price) {
+        super(id, name, age, skincolour, size, build, sex, price);
     }
 
     public Normal() {
-        super(0, null, 0, null, null, null, null);
+        super(0, null, 0, null, null, null, null,0);
     }
 
     @Override
     public void setAge(){
-        List<Integer> givenList = Arrays.asList(6, 7, 8);
-        int age = RandomGnomeInt(givenList);
-        this.Age = age;
+        this.Age = RandomGnomeInt(AgeList);
     }
 
     @Override
     public void setSkinColour() {
-        List<String> givenList = Arrays.asList("red", "blue", "white");
-        String skinColour = RandomGnomeString(givenList);
-        this.SkinColour = skinColour;
+        this.SkinColour = RandomGnomeString(ColourList);
     }
 
     @Override
     public void setSize(){
-        List<String> givenList = Arrays.asList("small", "medium", "large");
-        String size = RandomGnomeString(givenList);
-        this.Size = size;
+        this.Size = RandomGnomeString(SizeList);
     }
 
     @Override
     public void setBuild() {
-        List<String> givenList = Arrays.asList("normal", "thick");
-        String build = RandomGnomeString(givenList);
-        this.Build = build;
+        this.Build = RandomGnomeString(BuildList);
     }
 
     @Override
     public void setSex(){
-        List<String> givenList = Arrays.asList("female", "male");
-        String sex = RandomGnomeString(givenList);
-        this.Sex = sex;
+        this.Sex = RandomGnomeString(SexList);;
+    }
+
+    @Override
+    public void setPrice() {
+        this.Price = calculatePrice(PriceMultiplier);
     }
 
 
@@ -67,7 +70,7 @@ public class Normal extends Gnome {
     }
 
     public void Work() {
-        // TODO implement here
+        out.println(this.Name + " dit " +RandomGnomeString(TalkList));
     }
 
 }

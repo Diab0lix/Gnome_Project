@@ -13,12 +13,10 @@ public class Hunter extends Client {
         super(name, surname);
     }
 
-
     /**
      * 
      */
     public void Hunt(String name) {
-        Stock stock = Stock.getInstance();
 
         String gnomeCaracteristic = HuntRandomGnome();
 

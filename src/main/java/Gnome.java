@@ -1,5 +1,5 @@
 import java.util.*;
-
+import static java.lang.System.out;
 
 /**
  * 
@@ -7,44 +7,43 @@ import java.util.*;
 public abstract class Gnome {
     // abstract class to override method class from subclass
 
-    private int Id;
 
+    public static int IdSetter = 0;
     private static Map<String,Map<String, Double>> PriceMap = new HashMap<String, Map<String, Double>>();
-    private static Map<String, Double> Caract = new HashMap<String, Double>();
+    private static Map<String, Double> CaractColour = new HashMap<String, Double>();
+    private static Map<String, Double> CaractSex = new HashMap<String, Double>();
+    private static Map<String, Double> CaractSize = new HashMap<String, Double>();
+    private static Map<String, Double> CaractBuild = new HashMap<String, Double>();
+    private static Map<String, Double> CaractAge = new HashMap<String, Double>();
+        static {
+        CaractColour.put("blue",69.0);
+        CaractColour.put("red",666.0);
+        CaractColour.put("white",1.0);
+        CaractColour.put("black",1.0);
+        CaractColour.put("yellow",1.0);
+        CaractColour.put("metis",1.0);
+        PriceMap.put("Colour",CaractColour);
+        CaractSex.put("female",69.0);
+        CaractSex.put("male",666.0);
+        CaractSex.put("other",1.0);
+        PriceMap.put("Sex",CaractSex);
+        CaractSize.put("extra_small",1.0);
+        CaractSize.put("small",3.0);
+        CaractSize.put("medium",2.0);
+        CaractSize.put("large",1.0);
+        CaractSize.put("extra_large",0.5);
+        PriceMap.put("Size",CaractSize);
+        CaractBuild.put("thin",1.0);
+        CaractBuild.put("normal",2.0);
+        CaractBuild.put("thick",3.0);
+        CaractBuild.put("obese",0.5);
+        PriceMap.put("Build",CaractBuild);
+        CaractAge.put("less5",15.0);
+        CaractAge.put("more5less8",10.0);
+        CaractAge.put("more8less12",5.0);
+        CaractAge.put("more12",1.0);
+        PriceMap.put("Age",CaractAge);
 
-    static {
-        Caract.put("blue",69.0);
-        Caract.put("red",666.0);
-        Caract.put("white",1.0);
-        Caract.put("black",1.0);
-        Caract.put("yellow",1.0);
-        Caract.put("metis",1.0);
-        PriceMap.put("Colour",Caract);
-        Caract.clear();
-        Caract.put("female",69.0);
-        Caract.put("male",666.0);
-        Caract.put("other",1.0);
-        PriceMap.put("Sex",Caract);
-        Caract.clear();
-        Caract.put("extra_small",1.0);
-        Caract.put("small",3.0);
-        Caract.put("medium",2.0);
-        Caract.put("large",1.0);
-        Caract.put("extra_large",0.5);
-        PriceMap.put("Size",Caract);
-        Caract.clear();
-        Caract.put("thin",1.0);
-        Caract.put("normal",2.0);
-        Caract.put("thick",3.0);
-        Caract.put("obese",0.5);
-        PriceMap.put("Build",Caract);
-        Caract.clear();
-        Caract.put("less5",15.0);
-        Caract.put("more5less8",10.0);
-        Caract.put("more8less12",5.0);
-        Caract.put("more12",1.0);
-        PriceMap.put("Age",Caract);
-        Caract.clear();
     }
 
     
@@ -55,14 +54,14 @@ public abstract class Gnome {
     protected String Build;
     protected String Sex;
     protected String Name;
-    private double Price;
-    private int IdSetter = 0;
-
+    protected double Price;
+    protected int Id;
+    private List<String> TalkList = Arrays.asList("J'ai fait un menhir", "J'ai fait une chaussure","J'ai fait du boudin noire");
 
      /**
      * Default constructor
      */
-    public Gnome(int id, String name, int age, String skincolour, String size, String build, String sex) {
+    public Gnome(int id, String name, int age, String skincolour, String size, String build, String sex,double price) {
         this.Id = id;
         this.Name = name;
         this.Age = age;
@@ -70,15 +69,15 @@ public abstract class Gnome {
         this.Size=size;
         this.Build=build;
         this.Sex=sex;
-        //this.Price=this.GetPrice();
+        this.Price=price;
     }
 
-    protected void setId() {
+    final void setId() {
         this.Id = this.IdSetter;
         IdSetter += 1;
     }
 
-    protected void setName(String name)
+    final void setName(String name)
     {
         this.Name = name;
     }
@@ -92,6 +91,8 @@ public abstract class Gnome {
     public abstract void setBuild();
 
     public abstract void setSex();
+
+     public abstract void setPrice();
 
     public String getName() {
         return Name;
@@ -117,6 +118,7 @@ public abstract class Gnome {
         return Sex;
     }
 
+    public double getPrice() { return Price;}
     protected String RandomGnomeString(List<String> givenList) {
         Random rand = new Random();
         return givenList.get(rand.nextInt(givenList.size()));
@@ -132,26 +134,38 @@ public abstract class Gnome {
      * 
      */
     public void Work() {
-        // TODO implement here
+        out.println(RandomGnomeString(TalkList));
     }
 
     public void Idle() {
-        // TODO implement here
+        out.println(RandomGnomeString(TalkList));
     }
 
     public void HandCrafting() {
-        // TODO implement here
+        out.println(RandomGnomeString(TalkList));
+
     }
 
-    public double GetPrice() {
-       double Price = 0;
-        Price += PriceMap.get("Colour").get(this.SkinColour);
+    public double calculatePrice(double multiplier) {
+        double Price = 0;
+
         Price += PriceMap.get("Sex").get(this.Sex);
         Price += PriceMap.get("Build").get(this.Build);
-        Price += PriceMap.get("Size").get(this.SkinColour);
-        Price += PriceMap.get("Age").get(this.Age);
+        Price += PriceMap.get("Size").get(this.Size);
+        Price += PriceMap.get("Colour").get(this.SkinColour);
+        if (this.Age < 5) {
 
-        return Price ;
+            Price += PriceMap.get("Age").get("less5");
+        }else if (this.Age<8) {
+            Price += PriceMap.get("Age").get("more5less8");
+        }else if (this.Age<12) {
+            Price += PriceMap.get("Age").get("more8less12");
+        }else{
+            Price += PriceMap.get("Age").get("more12");
+        }
+
+
+        return Price*multiplier;
     }
 
 }

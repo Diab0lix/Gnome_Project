@@ -16,6 +16,7 @@ public class Client {
      *
      */
     private String surname;
+    protected Stock stock;
 
     /**
      * Default constructor
@@ -23,6 +24,7 @@ public class Client {
     public Client(String name, String surname) {
         this.name = name;
         this.surname = surname;
+        stock = Stock.getInstance();
     }
 
 
@@ -52,6 +54,13 @@ public class Client {
      */
     public void Sale() {
         // TODO implement here
+    }
+
+    /**
+     *
+     */
+    public String getStock() {
+        return stock.stockContent();
     }
 
 }

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="Gnome_Project" target="1.5" />
+      <module name="Gnome_Project" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

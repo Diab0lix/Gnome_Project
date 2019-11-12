@@ -15,8 +15,7 @@ public final class Stock {
     }
 
     public synchronized static Stock getInstance() {
-        if (instance == null)
-        {
+        if (instance == null) {
             instance = new Stock();
         }
         return instance;
@@ -25,12 +24,13 @@ public final class Stock {
     /**
      * List of the Gnomes in stock
      */
-    public List<Gnome> listGnomeStock;
+    public List<Gnome> listGnomeStock = new ArrayList<Gnome>();
 
     /**
      * List of the Gnomes currently rented
      */
-    public List<Gnome> listRentedGnome;
+    public List<Gnome> listRentedGnome = new ArrayList<Gnome>();
+    ;
 
 
     /**
@@ -46,11 +46,8 @@ public final class Stock {
      */
     public void delGnome(Gnome gnome) {
         // TODO implement here
-        for (Iterator<Gnome> iter = list.listIterator(); iter.hasNext(); ) {
-            Gnome a = iter.next();
-            if (iter == gnome) {
-                iter.remove();
-            }
+        if (listGnomeStock.contains(gnome)) {
+            listGnomeStock.remove(gnome);
         }
     }
 
@@ -59,13 +56,17 @@ public final class Stock {
      */
     public void moveGnome(Gnome gnome) {
         // TODO implement here
-        for (Iterator<Gnome> iter = list.listIterator(); iter.hasNext(); ) {
-            Gnome a = iter.next();
-            if (iter == gnome) {
-                listRentedGnome.add(gnome);
-                iter.remove();
-                break;
-            }
+        if (listGnomeStock.contains(gnome)) {
+            listRentedGnome.add(gnome);
+            listGnomeStock.remove(gnome);
         }
+    }
+
+    /**
+    * String of the content of the gnome stock, easier to see what's in
+     */
+    public String stockContent() {
+        String stringStock = listGnomeStock.toString();
+        return stringStock;
     }
 }

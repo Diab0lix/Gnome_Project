@@ -15,22 +15,22 @@ public class Order {
     /**
      * 
      */
-    public void ListGnome[ ];
+    public void ListGnome(){}
 
     /**
      * 
      */
-    public void Price;
+    public void Price(){}
 
     /**
      * 
      */
-    public void IDClient;
+    public void IDClient(){}
 
     /**
      * 
      */
-    public void OrderType;
+    public void OrderType(){}
 
 
 
@@ -39,9 +39,9 @@ public class Order {
     /**
      * @return
      */
-    public OrderType UpdateStock() {
+   // public OrderType UpdateStock() {
         // TODO implement here
-        return null;
-    }
+        //return null;
+   // }
 
 }
