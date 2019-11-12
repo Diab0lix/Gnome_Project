@@ -8,10 +8,10 @@ import static java.lang.System.out;
 public class Shiny extends Gnome {
 
     public float PriceMultiplier = 3;
-    private List<String> ColourList = Arrays.asList("red", "blue", "white","black","yellow","metis");
-    private List<Integer> AgeList = Arrays.asList(5,6,7,8,9,10,11,12,13,14,15);
-    private List<String> SizeList = Arrays.asList("extra_small","extra_large","small", "medium", "large");
-    private List<String> BuildList = Arrays.asList("thin","obese","normal", "thick");
+    private List<String> ColourList = Arrays.asList("red", "blue", "white");
+    private List<Integer> AgeList = Arrays.asList(5,6,7,8,9,10);
+    private List<String> SizeList = Arrays.asList("extra_small","extra_large", "medium");
+    private List<String> BuildList = Arrays.asList("normal", "thick");
     private List<String> SexList = Arrays.asList("female", "male","other");
     private List<String> TalkList = Arrays.asList("I AM BATMAN!!", "PIKA PIKA","un Choumarin");
 
@@ -34,26 +34,22 @@ public class Shiny extends Gnome {
 
     @Override
     public void setSkinColour() {
-        List<String> givenList = Arrays.asList("red", "blue", "white");
-        this.SkinColour = RandomGnomeString(givenList);
+        this.SkinColour = RandomGnomeString(ColourList);
     }
 
     @Override
     public void setSize(){
-        List<String> givenList = Arrays.asList("small", "medium", "large");
-        this.Size = RandomGnomeString(givenList);
+        this.Size = RandomGnomeString(SizeList);
     }
 
     @Override
     public void setBuild() {
-        List<String> givenList = Arrays.asList("normal", "thick");
-        this.Build = RandomGnomeString(givenList);
+        this.Build = RandomGnomeString(BuildList);
     }
 
     @Override
     public void setSex(){
-        List<String> givenList = Arrays.asList("female", "male");
-        this.Sex = RandomGnomeString(givenList);
+        this.Sex = RandomGnomeString(SexList);
     }
 
     @Override

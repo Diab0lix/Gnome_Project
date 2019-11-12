@@ -119,6 +119,7 @@ public abstract class Gnome {
     }
 
     public double getPrice() { return Price;}
+
     protected String RandomGnomeString(List<String> givenList) {
         Random rand = new Random();
         return givenList.get(rand.nextInt(givenList.size()));

@@ -56,19 +56,6 @@ public class Handicaped extends Gnome {
         this.Price = calculatePrice(PriceMultiplier);
     }
 
-
-    public String RandomGnomeString(List<String> givenList) {
-        Random rand = new Random();
-        String gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
-    }
-
-    public int RandomGnomeInt(List<Integer> givenList) {
-        Random rand = new Random();
-        int gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
-    }
-
     public void Work() {
         out.println(this.Name + " dit " +RandomGnomeString(TalkList));
     }

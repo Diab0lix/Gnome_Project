@@ -6,12 +6,12 @@ import static java.lang.System.out;
 public class Special extends Gnome {
 
     public double PriceMultiplier = 0.5;
-    public List<String> ColourList = Arrays.asList("red", "blue", "white","black","yellow","metis");
-    public List<Integer> AgeList = Arrays.asList(5,6,7,8,9,10,11,12,13,14,15);
-    public List<String> SizeList = Arrays.asList("extra_small","extra_large","small", "medium", "large");
-    public List<String> BuildList = Arrays.asList("thin","obese","normal", "thick");
-    public List<String> SexList = Arrays.asList("female", "male","other");
-    public List<String> TalkList = Arrays.asList("TIMMYYY","WTF, y avait une voiture sur un toit!!","Il est occupé de loot en plein fight!! DAMNED");
+    private List<String> ColourList = Arrays.asList("red", "blue", "white","black","yellow","metis");
+    private List<Integer> AgeList = Arrays.asList(5,6,7,8,9,10,11,12,13,14,15);
+    private List<String> SizeList = Arrays.asList("extra_small","extra_large","small", "medium", "large");
+    private List<String> BuildList = Arrays.asList("thin","obese","normal", "thick");
+    private List<String> SexList = Arrays.asList("female", "male","other");
+    private List<String> TalkList = Arrays.asList("TIMMYYY","WTF, y avait une voiture sur un toit!!","Il est occupé de loot en plein fight!! DAMNED");
 
     /**
      * Default constructor
@@ -52,18 +52,6 @@ public class Special extends Gnome {
     @Override
     public void setPrice() {
         this.Price = calculatePrice(PriceMultiplier);
-    }
-
-    public String RandomGnomeString(List<String> givenList) {
-        Random rand = new Random();
-        String gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
-    }
-
-    public int RandomGnomeInt(List<Integer> givenList) {
-        Random rand = new Random();
-        int gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
     }
 
     public void Idle() {
