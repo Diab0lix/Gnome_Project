@@ -29,42 +29,36 @@ public class Shiny extends Gnome {
     @Override
     public void setSkinColour() {
         List<String> givenList = Arrays.asList("red", "blue", "white");
-        String skinColour = RandomGnomeString(givenList);
-        this.SkinColour = skinColour;
+        this.SkinColour = RandomGnomeString(givenList);
     }
 
     @Override
     public void setSize(){
         List<String> givenList = Arrays.asList("small", "medium", "large");
-        String size = RandomGnomeString(givenList);
-        this.Size = size;
+        this.Size = RandomGnomeString(givenList);
     }
 
     @Override
     public void setBuild() {
         List<String> givenList = Arrays.asList("normal", "thick");
-        String build = RandomGnomeString(givenList);
-        this.Build = build;
+        this.Build = RandomGnomeString(givenList);
     }
 
     @Override
     public void setSex(){
         List<String> givenList = Arrays.asList("female", "male");
-        String sex = RandomGnomeString(givenList);
-        this.Sex = sex;
+        this.Sex = RandomGnomeString(givenList);
     }
 
 
     public String RandomGnomeString(List<String> givenList) {
         Random rand = new Random();
-        String gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
+        return givenList.get(rand.nextInt(givenList.size()));
     }
 
     public int RandomGnomeInt(List<Integer> givenList) {
         Random rand = new Random();
-        int gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
+        return givenList.get(rand.nextInt(givenList.size()));
     }
 
     public void Idle() {

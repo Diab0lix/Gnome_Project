@@ -119,14 +119,12 @@ public abstract class Gnome {
 
     protected String RandomGnomeString(List<String> givenList) {
         Random rand = new Random();
-        String gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
+        return givenList.get(rand.nextInt(givenList.size()));
     }
 
     protected int RandomGnomeInt(List<Integer> givenList) {
         Random rand = new Random();
-        int gnomeCaracteristic = givenList.get(rand.nextInt(givenList.size()));
-        return gnomeCaracteristic;
+        return givenList.get(rand.nextInt(givenList.size()));
     }
 
 
