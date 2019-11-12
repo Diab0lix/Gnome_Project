@@ -1,3 +1,4 @@
+critères de qualité
 - Extensibilité au niveau des attributs des gnomes.
 - Duplication de code minimale.
 - Implémentation aisée dans un autre programme.
