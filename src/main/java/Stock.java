@@ -61,4 +61,12 @@ public final class Stock {
             listGnomeStock.remove(gnome);
         }
     }
+
+    /**
+    * String of the content of the gnome stock, easier to see what's in
+     */
+    public String stockContent() {
+        String stringStock = listGnomeStock.toString();
+        return stringStock;
+    }
 }

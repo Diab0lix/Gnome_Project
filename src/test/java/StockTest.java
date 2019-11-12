@@ -27,5 +27,6 @@ class StockTest {
 
     @org.junit.jupiter.api.Test
     void moveGnome() {
+
     }
 }
