@@ -1,6 +1,6 @@
 # Gnome_Project
 
-##Description du projet
+## Description du projet
 
 Le projet tourne autour de la gestion de **Gnomes**. Il en va de leur achat, de leur location jusqu’à leur mis au travail. 
 Des **Hunters** s’occupent d’en capturer pour pouvoir, soit les faire travailler, soit les vendre à autrui via une classe 
@@ -15,7 +15,7 @@ comme, par exemple, des couleurs spéciales pour le *Shiny* que les autres types
 Le **Stock** permet le recensement de tous les **Gnomes** qui ne sont pas en circulation entre les **Clients**. Via **Order**, il sera 
 possible de faire du commerce de **Client** à **Client** ou bien de **Stock** à **Client**.
 
-##Implémentations restantes
+## Implémentations restantes
 
 La classe **Order** n'a pas été implémentée. Il serait aussi intéressant de rajouter une base de donnée pour savegarder l'état du stock.
 
