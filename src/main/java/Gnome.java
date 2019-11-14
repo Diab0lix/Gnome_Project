@@ -1,12 +1,8 @@
 import java.util.*;
 import static java.lang.System.out;
 
-/**
- * 
- */
 public abstract class Gnome {
     // abstract class to override method class from subclass
-
 
     public static int IdSetter = 0;
     private static Map<String,Map<String, Double>> PriceMap = new HashMap<String, Map<String, Double>>();
@@ -46,7 +42,6 @@ public abstract class Gnome {
 
     }
 
-    
     // set to protected to allow subclasses to access variables
     protected int Age;
     protected String SkinColour;
@@ -92,7 +87,7 @@ public abstract class Gnome {
 
     public abstract void setSex();
 
-     public abstract void setPrice();
+    public abstract void setPrice();
 
     public String getName() {
         return Name;
@@ -130,10 +125,6 @@ public abstract class Gnome {
         return givenList.get(rand.nextInt(givenList.size()));
     }
 
-
-    /**
-     * 
-     */
     public void Work() {
         out.println(RandomGnomeString(TalkList));
     }
@@ -164,7 +155,6 @@ public abstract class Gnome {
         }else{
             Price += PriceMap.get("Age").get("more12");
         }
-
 
         return Price*multiplier;
     }
