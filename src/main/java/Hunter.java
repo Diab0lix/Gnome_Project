@@ -9,8 +9,8 @@ public class Hunter extends Client {
     /**
      * Default constructor
      */
-    public Hunter(String name, String surname) {
-        super(name, surname);
+    public Hunter(String name, String surname, double wallet) {
+        super(name, surname, wallet);
     }
 
     /**
