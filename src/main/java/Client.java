@@ -22,7 +22,7 @@ public class Client {
         this.wallet += money;
     }
 
-    public GetFunds() {
+    public double GetFunds() {
         return wallet;
     }
 
