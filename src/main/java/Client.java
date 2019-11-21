@@ -3,7 +3,6 @@ import java.util.*;
 public class Client {
 
     private String name;
-
     private String surname;
     protected Stock stock;
     protected double wallet;
@@ -28,18 +27,27 @@ public class Client {
 
     public void Hunt() {
         // TODO implement here
+        System.out.println("A client can t hunt");
     }
 
     public void Buy() {
         // TODO implement here
+        Normal thomas = new Normal();
+        this.wallet = this.wallet - thomas.getPrice();
+        stock.addGnome(thomas);
     }
 
     public void Rent() {
         // TODO implement here
+        Normal thomas = new Normal();
+        thomas.getPrice();
+        stock.listRentedGnome.add(thomas);
     }
 
-    public void Sale() {
+    public void Sale(Gnome gnome) {
         // TODO implement here
+        wallet += gnome.getPrice() ;
+        stock.delGnome(gnome);
     }
 
     public String getStock() {
