@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Client {
 
-    private String name;
-    private String surname;
+    protected String name;
+    protected String surname;
     protected Stock stock;
     protected double wallet;
 

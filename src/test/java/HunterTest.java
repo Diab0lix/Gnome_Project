@@ -8,7 +8,7 @@ class HunterTest {
     @Test
     void HuntTest() {
         Hunter michel = new Hunter("michel","hunt",100);
-        michel.Hunt("gnomy");
+        michel.Hunt();
         out.println(michel.getStock());
     }
 
@@ -18,10 +18,10 @@ class HunterTest {
     @Test
     void HuntToStockTest(){
         Hunter michel = new Hunter("michel","hunt",100);
-        michel.Hunt("gnomy");
+        michel.Hunt();
         out.println(michel.getStock());
         Hunter jean = new Hunter("jean", "sairien",100);
-        jean.Hunt("gnomo");
+        jean.Hunt();
         out.println(jean.getStock());
     }
 }
