@@ -16,34 +16,35 @@ public class Hunter extends Client {
     /**
      * 
      */
-    public void Hunt(String name) {
+    @Override
+    public void Hunt() {
 
         String gnomeCaracteristic = HuntRandomGnome();
 
         switch(gnomeCaracteristic) {
             case "Shiny":
                 Shiny shiny = new Shiny();
-                CreateGnome(shiny, name);
+                CreateGnome(shiny, this.name);
                 stock.addGnome(shiny);
                 break;
             case "DelicateHands":
                 DelicateHands delicateHands = new DelicateHands();
-                CreateGnome(delicateHands, name);
+                CreateGnome(delicateHands, this.name);
                 stock.addGnome(delicateHands);
                 break;
             case "Handicaped":
                 Handicaped handicaped = new Handicaped();
-                CreateGnome(handicaped, name);
+                CreateGnome(handicaped, this.name);
                 stock.addGnome(handicaped);
                 break;
             case "Special":
                 Special special = new Special();
-                CreateGnome(special, name);
+                CreateGnome(special, this.name);
                 stock.addGnome(special);
                 break;
             case "Normal":
                 Normal normal = new Normal();
-                CreateGnome(normal, name);
+                CreateGnome(normal, this.name);
                 stock.addGnome(normal);
                 break;
             default:
