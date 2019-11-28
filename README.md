@@ -2,7 +2,7 @@
 
 ## Description du projet
 
-Le projet tourne autour de la gestion de **Gnomes**. Il en va de leur achat, de leur location jusqu’à leur mis au travail. 
+Le projet tourne autour de la gestion de **Gnomes**. Il en va de leur achat, de leur location jusqu’à leur mise au travail. 
 Des **Hunters** s’occupent d’en capturer pour pouvoir, soit les faire travailler, soit les vendre à autrui via une classe 
 nommée **Order**. Des **Customers** sont également là pour pouvoir acheter, vendre et faire travailler les **Gnomes**, mais ne 
 peuvent en chasser. 
