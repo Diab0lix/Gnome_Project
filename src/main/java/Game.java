@@ -1,13 +1,15 @@
+import org.graalvm.compiler.lir.StandardOp;
+
 import javax.swing.*;
 import java.awt.*;
-
 public class Game extends JFrame {
-    public CommandPanel command;
-    public ScreenPanel Screen;
-    public Infoscreen Info;
-    public Game() {
+
+    private CommandPanel command;
+    private ScreenPanel Screen;
+    private Infoscreen Info;
+    private Client thomas;
+    public Game(int difficulty) {
         super();
-        this.setBackground(Color.BLUE);
         command = new CommandPanel();// Creation of the Jpanel for buttons
         Screen = new ScreenPanel();    // creation of the upper container
         Info = new Infoscreen();
@@ -20,10 +22,13 @@ public class Game extends JFrame {
         setVisible(true);
         setSize(800,500);
         //setResizable(false);
-
+        if(difficulty==1){
+            thomas = new Client("Harry", "Potter", 1000);
+        }
+        else{
+            thomas = new Hunter("Geralt","Of Rivia", 20);
+        }
     }
-    public static void main(String[] args) {
-        new Game();
 
-    }
+
 }
