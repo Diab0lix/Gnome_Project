@@ -44,7 +44,8 @@ public class CommandPanel extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        if(source == BuyButton){
-        }
+
+        System.out.println(source.toString());
+
     }
 }

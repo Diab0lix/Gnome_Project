@@ -7,12 +7,13 @@ import java.awt.event.ActionListener;
 public class DifficultyScreen implements ActionListener {
 
     private JFrame menu;
-    private static JButton Difficultesimple, Difficultehard;
+    private JButton Difficultesimple, Difficultehard;
+    public Game game;
 
     public DifficultyScreen() {
         menu = new JFrame("Difficulty Menu");
-        menu.setSize(400, 400);
-        GridLayout layou=new GridLayout(2,2);
+        menu.setBackground(Color.BLACK);
+        FlowLayout layou=new FlowLayout();
         layou.setHgap(10);layou.setVgap(30);
         menu.setLayout(layou);
         initialisemenu();
@@ -41,10 +42,10 @@ public class DifficultyScreen implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         if(actionEvent.getSource()==Difficultehard){
-            new Game(1);
+            game = new Game(1);
         }
         else{
-            new Game(0);
+            game = new Game(0);
         }
         menu.dispose();
     }
