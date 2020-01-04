@@ -11,9 +11,11 @@ public class Game extends JFrame {
         super();
         if(difficulty==1){
             Player = new Client("Harry", "Potter", 1000);
+            System.out.println("you are a Client");
         }
         else{
             Player = new Hunter("Geralt","Of Rivia", 20);
+            System.out.println("you are a Hunter");
         }
         command = new CommandPanel();// Creation of the Jpanel for buttons
         Screen = new ScreenPanel();    // creation of the upper container
